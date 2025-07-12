@@ -1,5 +1,26 @@
 ---
 import "../styles/global.css";
+
+import p5 from "p5";
+import { p5asciify } from "p5.asciify";
+
+const sketch = (p) => {
+    p.setup = () => {
+        p.createCanvas(800, 800, p.WEBGL);
+    };
+
+    p.draw = () => {
+        p.clear();
+        p.background(0);
+        p.fill(255);
+        p.rotateX(p.radians(p.frameCount * 3));
+        p.rotateZ(p.radians(p.frameCount));
+        p.directionalLight(255, 255, 255, 0, 0, -1);
+        p.box(800, 100, 100);
+    };
+};
+
+let myp5 = new p5(sketch);
 ---
 
 <html lang="en">
@@ -9,6 +30,7 @@ import "../styles/global.css";
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>Astro</title>
+        <script src=""></script>
     </head>
     <body>
         <main>
@@ -17,6 +39,7 @@ import "../styles/global.css";
                 <h2>Dynamic Identity Systems</h2>
                 <h2>Verso Books</h2>
             </div>
+            <!-- <div class="sketch">{myp5}</div> -->
         </main>
     </body>
 </html>
