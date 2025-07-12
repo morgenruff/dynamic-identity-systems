@@ -19,8 +19,9 @@
 }
 
 @layer global {
-	main {
+	body {
 		max-width: calc(100% - 2rem);
+		padding: 2rem;
 	}
 
 	article {
