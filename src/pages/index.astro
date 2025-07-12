@@ -19,12 +19,13 @@ import "../styles/global.css";
                 <h2>Summer 2025</h2>
             </div>
             <div class="buttons">
-                <a
-                    class="proj"
-                    href="/src/pages/dynamic-identity-systems-verso-books"
-                >
-                    <p class="title">Project 1 - Dynamic Identity Systems</p>
-                    <p class="client">Verso Books</p>
+                <a class="proj" href="/dynamic-identity-systems-verso-books">
+                    <p class="title">Project 1<br />Dynamic Identity Systems</p>
+                    <p class="client">Client: Verso Books</p>
+                </a>
+                <a class="proj" href="">
+                    <p class="title">Project 2<br />Environmental Design</p>
+                    <p class="client">Client: TBD</p>
                 </a>
             </div>
         </main>
@@ -32,7 +33,23 @@ import "../styles/global.css";
 </html>
 
 <style>
+    main {
+        display: grid;
+        gap: 3rem;
+    }
     .title-wrapper {
         display: grid;
+    }
+    .buttons {
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .proj {
+        border: 1px dashed red;
+        border-radius: 12px;
+        width: 100%;
+        padding: 1rem;
     }
 </style>
