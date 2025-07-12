@@ -1,0 +1,40 @@
+@import url("reset.css") layer(reset);
+@layer reset, root, global, typography;
+
+/* @media (prefers-reduced-motion: no-preference) {
+  @view-transition {
+    navigation: auto;
+  }
+} */
+
+@layer root {
+	:root {
+		color-scheme: light dark;
+		/* font variables */
+
+		/* color variables */
+
+		/* new comprehensive palette */
+	}
+}
+
+@layer global {
+	main {
+		max-width: calc(100% - 2rem);
+	}
+
+	article {
+		max-width: 65ch;
+	}
+
+	:where(a:focus-visible) {
+		outline-offset: 0.15rem;
+		outline-width: 0.15rem;
+		outline-color: var(--c-lightfrog);
+	}
+
+	:where(ul, ol, dl, dt, dd, p, figure, blockquote) {
+		hanging-punctuation: first last;
+		text-wrap: pretty;
+	}
+}
